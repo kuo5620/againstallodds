@@ -1,0 +1,12 @@
+variable_name,sport,level,category,data_type,description,source,pre_game_only,calculation_or_definition,missing_value_rule,required_or_optional,notes
+game_id,ALL,game,identifier,string,Unique game or match identifier,TBD,yes,Source-provided ID or reproducible composite key,Must not be missing,required,Primary key
+game_date,ALL,game,time,date,Date of the game or match,TBD,yes,Convert to a consistent datetime format,Must not be missing,required,Used for chronological validation
+home_team,ALL,game,identifier,string,Home team name,TBD,yes,Standardized team naming,Must not be missing,required,
+away_team,ALL,game,identifier,string,Away team name,TBD,yes,Standardized team naming,Must not be missing,required,
+home_win,ALL,game,outcome,integer,Binary primary outcome for baseline models,Derived,no,1 if home team wins otherwise 0; soccer draws are 0 in initial binary model,Must not be missing,required,Outcome is not used as a pre-game predictor
+elo_diff,ALL,game,team_strength,float,Pre-game home Elo minus away Elo,Derived,yes,home_pre_game_elo - away_pre_game_elo,Document handling,required,Must be calculated before current game update
+recent_form_diff,ALL,game,recent_form,float,Difference in pre-game rolling form between teams,Derived,yes,Home rolling form minus away rolling form using shifted history,Document handling,required,Window varies by sport
+rest_diff,ALL,game,context,float,Home rest days minus away rest days,Derived,yes,Days since each team's previous game,Document handling,optional,Depends on reliable dates
+fragility_score,ALL,game,reliability,float,Final Against All Odds prediction fragility score,Derived,yes,Defined after baseline models and perturbation experiments,Not available in early weeks,required_final,Do not invent Week 1 formula
+unpredictability_index,ALL,game,reliability,float,Final Against All Odds overall unpredictability score,Derived,yes,Defined and validated later from reliability signals,Not available in early weeks,required_final,Do not invent Week 1 weights
+reliability_label,ALL,game,reliability,string,Final Predict Caution or Abstain classification,Derived,yes,Thresholds selected using validation data,Not available in early weeks,required_final,Do not set arbitrary final thresholds in Week 1
