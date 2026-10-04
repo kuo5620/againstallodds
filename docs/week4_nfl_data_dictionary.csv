@@ -1,0 +1,17 @@
+variable_name,sport,description,availability
+game_id,NFL,source game identifier,pre-game identifier
+season,NFL,NFL season starting year,pre-game identifier
+week,NFL,regular-season week,pre-game identifier
+game_date,NFL,"scheduled date, normalized",pre-game context
+home_team,NFL,standardized home abbreviation,pre-game context
+away_team,NFL,standardized away abbreviation,pre-game context
+home_score,NFL,home final points,post-game outcome
+away_score,NFL,away final points,post-game outcome
+HOME_MARGIN,NFL,home_score minus away_score,post-game outcome
+HOME_WIN,NFL,"1 home win, 0 away win, missing if tied",post-game target
+is_tie,NFL,whether final scores are equal,post-game outcome
+team_result,NFL,W / L / T in team-game row,post-game outcome
+points_for,NFL,team final score,post-game historical stat
+points_against,NFL,opponent final score,post-game historical stat
+point_differential,NFL,points_for minus points_against,post-game historical stat
+data_split,NFL,TRAIN 2021-23; VALIDATION 2024; TEST 2025,study design
