@@ -1,0 +1,32 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Jupyter / Colab checkpoints
+.ipynb_checkpoints/
+
+# Environment / secret files
+.env
+.env.*
+*.key
+credentials.*
+secrets.*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+.cache/
+
+# Raw datasets can be reproduced from source
+data/raw/
+
+# Temporary ZIP files
+*.zip
