@@ -1,0 +1,6 @@
+season,matches,expected_matches,unique_teams,expected_teams,every_team_38_matches,unique_directed_fixtures,first_date,last_date,home_wins,draws,away_wins,complete_season
+2021-22,380,380,20,20,True,True,2021-08-13,2022-05-22,163,88,129,True
+2022-23,380,380,20,20,True,True,2022-08-05,2023-05-28,184,87,109,True
+2023-24,380,380,20,20,True,True,2023-08-11,2024-05-19,175,82,123,True
+2024-25,380,380,20,20,True,True,2024-08-16,2025-05-25,155,93,132,True
+2025-26,380,380,20,20,True,True,2025-08-15,2026-05-24,162,104,114,True

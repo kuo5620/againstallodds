@@ -1,0 +1,13 @@
+check,passed
+five_selected_seasons,True
+game_id_unique,True
+no_required_game_missing,True
+home_win_binary,True
+no_official_ties_after_repair,True
+outcome_matches_wl,True
+home_indicator_correct,True
+away_indicator_correct,True
+different_teams_each_game,True
+chronologically_sorted,True
+30_teams_each_season,True
+1230_games_each_season,False

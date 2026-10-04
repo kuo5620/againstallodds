@@ -1,0 +1,11 @@
+check,passed
+five_seasons,True
+unique_game_id,True
+all_32_teams_each_season,True
+272_regular_season_games_per_season,False
+chronological_order,True
+no_missing_critical_fields,True
+two_team_rows_per_game,True
+ties_have_missing_binary_label,True
+non_ties_have_binary_label,True
+correct_score_based_winner,True

@@ -1,0 +1,6 @@
+season,data_split,games,first_game,last_game,ties,unique_teams,expected_games,coverage_ok
+2021,TRAIN,272,2021-09-09,2022-01-09,1,32,272,True
+2022,TRAIN,271,2022-09-08,2023-01-08,2,32,272,False
+2023,TRAIN,272,2023-09-07,2024-01-07,0,32,272,True
+2024,VALIDATION,272,2024-09-05,2025-01-05,0,32,272,True
+2025,TEST,272,2025-09-04,2026-01-04,1,32,272,True

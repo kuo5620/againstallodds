@@ -1,0 +1,11 @@
+check,passed
+five_completed_seasons,True
+all_seasons_complete,True
+no_critical_missing,True
+unique_game_id,True
+chronological_game_order,True
+home_win_matches_score,True
+all_draws_labeled_zero,True
+team_game_rows_double,True
+no_source_result_disagreement,True
+no_removed_source_rows,True
