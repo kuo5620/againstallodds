@@ -1,0 +1,27 @@
+variable_name,sport,level,category,data_type,description,source,pre_game_only,calculation_or_definition,missing_value_rule,required_or_optional,notes
+game_id,ALL,game,identifier,string,Unique game or match identifier,TBD,yes,Source ID or reproducible composite key,Must not be missing,required,Primary key
+game_date,ALL,game,time,date,Date of the game or match,TBD,yes,Convert to consistent datetime format,Must not be missing,required,Used for chronological validation
+elo_diff,ALL,game,team_strength,float,Pre-game home Elo minus away Elo,Derived,yes,home_pre_game_elo - away_pre_game_elo,Document handling,required,Calculate before current-game Elo update
+fragility_score,ALL,game,reliability,float,Final prediction fragility score,Derived,yes,Defined after perturbation experiments,Not available in early weeks,required_final,Do not invent a final formula during Week 1
+reliability_label,ALL,game,reliability,string,"Predict, Caution, or Abstain",Derived,yes,Thresholds selected using validation data,Not available in early weeks,required_final,Avoid arbitrary final thresholds in Week 1
+season_start,NBA,game,time,integer,Starting year of the NBA season,Derived from selected season,yes,Example: 2025 represents 2025-26,Must not be missing,required,Used for chronological split
+season_label,NBA,game,time,string,Readable NBA season label,Derived,yes,YYYY-YY format,Must not be missing,required,Example: 2025-26
+data_split,NBA,game,validation,string,Chronological TRAIN/VALIDATION/TEST label,Derived,yes,2021-24 train; 2024-25 validation; 2025-26 test,Must not be missing,required,Never randomly shuffle across seasons
+home_team_id,NBA,game,identifier,integer,NBA team ID for home team,NBA Stats game log,yes,Home row identified from matchup notation,Must not be missing,required,
+home_team_abbr,NBA,game,identifier,string,Canonical home team abbreviation,NBA Stats game log,yes,Standardized 3-letter abbreviation,Must not be missing,required,
+home_team_name,NBA,game,identifier,string,Canonical home team name,Derived from abbreviation map,yes,Mapped from team abbreviation,Must not be missing,required,
+away_team_id,NBA,game,identifier,integer,NBA team ID for away team,NBA Stats game log,yes,Away row identified from matchup notation,Must not be missing,required,
+away_team_abbr,NBA,game,identifier,string,Canonical away team abbreviation,NBA Stats game log,yes,Standardized 3-letter abbreviation,Must not be missing,required,
+away_team_name,NBA,game,identifier,string,Canonical away team name,Derived from abbreviation map,yes,Mapped from team abbreviation,Must not be missing,required,
+home_pts,NBA,game,outcome,numeric,Final points scored by home team,NBA Stats game log,no,Final game score,Must not be missing,required,Post-game value; not a same-game predictor
+away_pts,NBA,game,outcome,numeric,Final points scored by away team,NBA Stats game log,no,Final game score,Must not be missing,required,Post-game value; not a same-game predictor
+HOME_WIN,NBA,game,outcome,integer,Binary target indicating a home-team win,Derived,no,1 when home W/L is W/L; 0 when home W/L is L/W; score fallback only if needed,Must not be missing,required,Primary binary target for NBA modeling
+HOME_MARGIN,NBA,game,outcome,numeric,Home-team final scoring margin,Derived,no,home_pts - away_pts after score repair when possible,May be missing only for unresolved malformed source scores,required,Post-game outcome information
+is_home,NBA,team_game,context,integer,Home/away indicator on team-game rows,Derived from matchup,yes,1 for vs.; 0 for @,Must not be missing,required,Used to construct one-row-per-game dataset
+fg_pct,NBA,team_game,offense,float,Current-game field-goal percentage,NBA Stats game log,no,Source team box-score statistic,May be missing in unusual records,preferred,Can only enter later-game predictors after shifting
+fg3_pct,NBA,team_game,offense,float,Current-game three-point percentage,NBA Stats game log,no,Source team box-score statistic,May be missing in unusual records,preferred,Can only enter later-game predictors after shifting
+off_rating,NBA,team_game,offense,float,Current-game offensive rating,NBA Stats game log,no,Source advanced team statistic,Document missingness,preferred,Use only historically with leakage-safe shifting
+def_rating,NBA,team_game,defense,float,Current-game defensive rating,NBA Stats game log,no,Source advanced team statistic,Document missingness,preferred,Use only historically with leakage-safe shifting
+net_rating,NBA,team_game,team_strength,float,Current-game net rating,NBA Stats game log,no,off_rating - def_rating or source equivalent,Document missingness,preferred,Use only historically with leakage-safe shifting
+efg_pct,NBA,team_game,offense,float,Current-game effective field-goal percentage,NBA Stats game log,no,Source advanced team statistic,Document missingness,preferred,Use only historically with leakage-safe shifting
+pace,NBA,team_game,context,float,Current-game pace estimate,NBA Stats game log,no,Source advanced team statistic,Document missingness,optional,Use only historically with leakage-safe shifting
