@@ -1,0 +1,42 @@
+feature,sport,description,leakage_safe_calculation
+HOME_ELO_PRE,ALL,Home team's Elo before the current game,Chronological Elo; rating stored before current-game update
+AWAY_ELO_PRE,ALL,Away team's Elo before the current game,Chronological Elo; rating stored before current-game update
+ELO_DIFF,ALL,Home Elo minus away Elo,HOME_ELO_PRE - AWAY_ELO_PRE
+HOME_WIN_PCT_PRE,ALL,Home season-to-date result rate,Previous games only; shift(1) before expanding mean
+AWAY_WIN_PCT_PRE,ALL,Away season-to-date result rate,Previous games only; shift(1) before expanding mean
+WIN_PCT_DIFF,ALL,Home minus away win percentage,HOME_WIN_PCT_PRE - AWAY_WIN_PCT_PRE
+HOME_FORM_3,ALL,Home recent form over up to the previous 3 games,shift(1).rolling(3)
+AWAY_FORM_3,ALL,Away recent form over up to the previous 3 games,shift(1).rolling(3)
+FORM_3_DIFF,ALL,Home minus away last-3 form,HOME_FORM_3 - AWAY_FORM_3
+HOME_FORM_5,ALL,Home recent form over up to the previous 5 games,shift(1).rolling(5)
+AWAY_FORM_5,ALL,Away recent form over up to the previous 5 games,shift(1).rolling(5)
+FORM_DIFF,ALL,Primary recent-form difference,HOME_FORM_5 - AWAY_FORM_5
+HOME_FORM_10,ALL,Home recent form over up to the previous 10 games,shift(1).rolling(10)
+AWAY_FORM_10,ALL,Away recent form over up to the previous 10 games,shift(1).rolling(10)
+FORM_10_DIFF,ALL,Home minus away last-10 form,HOME_FORM_10 - AWAY_FORM_10
+HOME_POINT_GOAL_DIFF_PRE,ALL,Home historical average point/goal differential,Previous games only
+AWAY_POINT_GOAL_DIFF_PRE,ALL,Away historical average point/goal differential,Previous games only
+POINT_GOAL_DIFF,ALL,Home minus away point/goal-differential strength,Home - Away
+HOME_OFFENSE_PRE,ALL,Home historical average points/goals scored,Previous games only
+AWAY_OFFENSE_PRE,ALL,Away historical average points/goals scored,Previous games only
+OFFENSE_DIFF,ALL,Home minus away offensive production,Home - Away
+HOME_DEFENSE_ALLOWED_PRE,ALL,Home historical average points/goals allowed,Previous games only
+AWAY_DEFENSE_ALLOWED_PRE,ALL,Away historical average points/goals allowed,Previous games only
+DEFENSE_DIFF,ALL,Defensive advantage from home perspective,Away allowed - Home allowed
+HOME_REST_DAYS,ALL,Days since home team's previous game,Current date - previous completed game date
+AWAY_REST_DAYS,ALL,Days since away team's previous game,Current date - previous completed game date
+REST_DIFF,ALL,Home rest minus away rest,HOME_REST_DAYS - AWAY_REST_DAYS
+HOME_OPPONENT_ELO_PRE,ALL,Current opponent strength faced by home team,Away team's pre-game Elo
+AWAY_OPPONENT_ELO_PRE,ALL,Current opponent strength faced by away team,Home team's pre-game Elo
+HOME_SCHEDULE_STRENGTH_LAST5,ALL,Average Elo of home team's prior opponents,shift(1).rolling(5) on opponent pre-game Elo
+AWAY_SCHEDULE_STRENGTH_LAST5,ALL,Average Elo of away team's prior opponents,shift(1).rolling(5) on opponent pre-game Elo
+SCHEDULE_STRENGTH_DIFF,ALL,Home minus away recent schedule strength,Home - Away
+HOME_ADVANTAGE,ALL,Home-team context indicator,1 for home-perspective game rows
+OFF_RATING_DIFF,NBA,Difference in rolling offensive rating where available,Historical rolling feature only
+DEF_RATING_DIFF,NBA,Home defensive-rating advantage where available,Historical rolling feature only
+NET_RATING_DIFF,NBA,Difference in rolling net rating where available,Historical rolling feature only
+EFG_DIFF,NBA,Difference in rolling effective field-goal percentage,Historical rolling feature only
+THREE_PT_DIFF,NBA,Difference in rolling three-point percentage,Historical rolling feature only
+LEAGUE_POINTS_RATE_DIFF,Premier League,Difference in historical league points per game,Previous matches only
+SHOTS_DIFF,Premier League,Difference in rolling shots where available,Historical rolling feature only
+SHOTS_ON_TARGET_DIFF,Premier League,Difference in rolling shots on target where available,Historical rolling feature only
