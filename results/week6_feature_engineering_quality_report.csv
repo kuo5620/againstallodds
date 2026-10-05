@@ -1,0 +1,4 @@
+sport,clean_input_games,model_ready_games,rows_removed_for_missing_prior_history_or_ties,unique_game_ids,chronological_order,binary_HOME_WIN,required_features_complete,shift_1_rule_used,status
+NBA,6140,6061,79,True,True,True,True,True,PASS
+NFL,1359,1276,83,True,True,True,True,True,PASS
+Premier League,1900,1850,50,True,True,True,True,True,PASS
