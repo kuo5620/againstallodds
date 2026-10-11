@@ -1,0 +1,6 @@
+check,passed
+all_three_sports_loaded,True
+all_analysis_datasets_nonempty,True
+home_win_binary,True
+three_baselines_present,True
+test_held_out_by_default,True
