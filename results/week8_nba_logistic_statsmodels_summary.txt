@@ -1,0 +1,24 @@
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:               HOME_WIN   No. Observations:                 3643
+Model:                            GLM   Df Residuals:                     3635
+Model Family:                Binomial   Df Model:                            7
+Link Function:                  Logit   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -2300.6
+Date:                Sun, 11 Oct 2026   Deviance:                       4601.3
+Time:                        01:53:19   Pearson chi2:                 3.65e+03
+No. Iterations:                     4   Pseudo R-squ. (CS):             0.1049
+Covariance Type:            nonrobust                                         
+==========================================================================================
+                             coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+const                      0.2448      0.036      6.891      0.000       0.175       0.314
+ELO_DIFF                   0.0044      0.000      9.143      0.000       0.003       0.005
+WIN_PCT_DIFF              -0.4194      0.351     -1.195      0.232      -1.107       0.268
+FORM_DIFF                 -0.0807      0.132     -0.613      0.540      -0.339       0.177
+POINT_GOAL_DIFF            0.0253      0.007      3.656      0.000       0.012       0.039
+OFFENSE_DIFF               0.0121      0.005      2.394      0.017       0.002       0.022
+DEFENSE_DIFF               0.0132      0.005      2.771      0.006       0.004       0.023
+REST_DIFF                  0.1338      0.035      3.842      0.000       0.066       0.202
+SCHEDULE_STRENGTH_DIFF     0.0007      0.001      1.169      0.242      -0.000       0.002
+==========================================================================================

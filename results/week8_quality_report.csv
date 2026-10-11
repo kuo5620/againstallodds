@@ -1,0 +1,8 @@
+check,passed
+three_sports_have_elo,True
+three_validation_elo_metrics,True
+elo_probabilities_between_0_and_1,True
+logistic_metrics_available,True
+comparison_created,True
+test_held_out_by_default,True
+documentation_created,True

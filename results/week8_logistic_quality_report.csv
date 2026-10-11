@@ -1,0 +1,6 @@
+check,passed
+three_sports_modeled,True
+three_validation_metric_rows,True
+coefficients_created,True
+validation_probabilities_valid,True
+test_held_out_by_default,True
