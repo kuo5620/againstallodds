@@ -1,0 +1,9 @@
+check,passed
+three_sports_loaded,True
+three_primary_models_loaded,True
+six_metric_rows_created,True
+all_calibrated_probabilities_valid,True
+validation_used_for_calibration,True
+test_used_for_evaluation,True
+three_calibration_curves_created,True
+required_outputs_exist,True

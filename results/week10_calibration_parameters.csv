@@ -1,0 +1,4 @@
+sport,primary_model,calibration_method,calibrator_intercept,calibrator_slope,validation_calibration_games,test_evaluation_games
+NBA,Logistic Regression,Platt scaling,-0.019642648894091983,0.9667818487933175,1209,1209
+NFL,Elo,Platt scaling,0.14016892191535074,1.3232120705463501,256,255
+Premier League,Logistic Regression,Platt scaling,-0.2769695852485119,0.8325247892490171,370,370
