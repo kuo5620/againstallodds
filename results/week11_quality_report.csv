@@ -1,0 +1,10 @@
+check,passed
+three_sports_analyzed,True
+all_scores_between_0_and_100,True
+all_categories_valid,True
+all_original_probabilities_valid,True
+analysis_uses_test_split,True
+five_main_features_tested,True
+feature_rows_complete,True
+summary_files_exist,True
+documentation_exists,True

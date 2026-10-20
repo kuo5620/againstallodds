@@ -1,0 +1,4 @@
+sport,primary_model,games,mean_fragility_score,median_fragility_score,mean_original_confidence,percent_flip_found_within_4sd,stable_games,moderate_games,fragile_games,extremely_fragile_games,prediction_accuracy
+NBA,Logistic Regression,1209,63.74586435070306,68.75,0.6668272868744308,98.42845326716294,78,209,380,542,0.6898263027295285
+NFL,Elo,255,61.76470588235294,62.5,0.6786132367295371,99.6078431372549,19,49,85,102,0.6196078431372549
+Premier League,Logistic Regression,370,56.570945945945944,62.5,0.6611591363327056,94.5945945945946,59,59,116,136,0.6162162162162163

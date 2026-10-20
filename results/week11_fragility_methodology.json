@@ -1,0 +1,24 @@
+{
+  "project": "Against All Odds",
+  "week": 11,
+  "fragility_features": [
+    "ELO_DIFF",
+    "FORM_DIFF",
+    "OFFENSE_DIFF",
+    "DEFENSE_DIFF",
+    "REST_DIFF"
+  ],
+  "perturbation_step_standard_deviations": 0.25,
+  "maximum_flip_search_standard_deviations": 4.0,
+  "score_formula": "100 * (1 - min(single-feature flip distance, 4 SD) / 4 SD)",
+  "category_thresholds": {
+    "Stable": "0 <= score < 25",
+    "Moderate": "25 <= score < 50",
+    "Fragile": "50 <= score < 75",
+    "Extremely Fragile": "75 <= score <= 100"
+  },
+  "base_model_fit_split": "TRAIN",
+  "calibration_fit_split": "VALIDATION",
+  "fragility_analysis_split": "TEST",
+  "player_availability": "Not included because the current Week 9 primary models do not contain a reliable player-availability feature."
+}
