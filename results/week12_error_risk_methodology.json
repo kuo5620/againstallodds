@@ -1,0 +1,36 @@
+{
+  "project": "Against All Odds",
+  "week": 12,
+  "target_definition": {
+    "PRIMARY_MODEL_CORRECT": "1 if original predicted winner was correct, otherwise 0",
+    "PRIMARY_MODEL_ERROR": "1 if original predicted winner was wrong, otherwise 0"
+  },
+  "error_risk_model_target": "PRIMARY_MODEL_ERROR",
+  "primary_model_fit_split": "TRAIN",
+  "error_risk_model_fit_split": "VALIDATION",
+  "error_risk_model_evaluation_split": "TEST",
+  "error_risk_model": "Balanced Logistic Regression",
+  "candidate_risk_features": [
+    "ORIGINAL_WIN_PROBABILITY",
+    "FRAGILITY_SCORE",
+    "ABS_ELO_DIFF",
+    "ABS_TEAM_STRENGTH_DIFF",
+    "ABS_FORM_DIFF",
+    "MODEL_DISAGREEMENT_COUNT",
+    "ABS_REST_DIFF",
+    "HOME_ADVANTAGE",
+    "PRIMARY_PREDICTS_HOME"
+  ],
+  "fragility_features": [
+    "ELO_DIFF",
+    "FORM_DIFF",
+    "OFFENSE_DIFF",
+    "DEFENSE_DIFF",
+    "REST_DIFF"
+  ],
+  "fragility_step_sd": 0.25,
+  "fragility_max_search_sd": 4.0,
+  "model_disagreement_definition": "Number of Elo, Logistic Regression, and Gradient Boosting winner predictions that disagree with the selected primary model.",
+  "team_strength_definition": "Absolute difference in pre-game win percentage.",
+  "probability_note": "Week 12 uses original primary-model probability for leakage-safe VALIDATION risk-model training. Week 10 calibrated probability remains a separate input for Week 13."
+}

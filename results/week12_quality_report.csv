@@ -1,0 +1,12 @@
+check,passed
+three_sports_completed,True
+validation_used_for_risk_training,True
+test_used_for_final_evaluation,True
+primary_model_correct_binary,True
+primary_model_error_binary,True
+error_risk_probabilities_valid,True
+fragility_scores_valid,True
+model_disagreement_valid,True
+three_error_risk_models_saved,True
+required_results_exist,True
+documentation_exists,True
