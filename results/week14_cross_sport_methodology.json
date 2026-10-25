@@ -1,0 +1,10 @@
+{
+  "evaluation_split": "TEST",
+  "easiest_sport": "highest full-coverage winner-prediction accuracy",
+  "hardest_sport": "lowest full-coverage winner-prediction accuracy",
+  "most_fragile": "highest mean Fragility Score",
+  "abstention_benefit": "accuracy gain at 60% coverage versus 100% coverage",
+  "instability_factor": "largest mean standardized Unpredictability component",
+  "high_risk": "top 25% of games by Unpredictability Index within each sport",
+  "upset_proxy": "PRIMARY_MODEL_ERROR = 1 (original winner prediction was wrong)"
+}

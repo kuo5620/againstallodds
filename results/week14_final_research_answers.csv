@@ -1,0 +1,7 @@
+question,answer,basis,value
+Which sport is easiest to predict?,NBA,Highest full-coverage TEST accuracy.,0.6898263027295285
+Which sport is hardest to predict?,Soccer (Premier League),Lowest full-coverage TEST accuracy.,0.6243243243243243
+Which sport has the most fragile predictions?,NBA,Highest mean Fragility Score.,63.56492969396195
+Which sport benefits most from abstention?,NBA,Largest accuracy gain at the common 60% coverage level.,0.06223981297295089
+Which factor creates the most instability overall?,Probability uncertainty,Largest mean 0–100 Unpredictability component.,66.53550211119739
+Are prediction errors/upsets concentrated among high-risk predictions?,Yes. All three sports show prediction-error concentration in the top-risk group.,Top 25% risk group compared with its share of prediction errors.,1.0
