@@ -1,0 +1,7 @@
+check,passed
+three_sports_present,True
+required_coverages_present,True
+fifteen_required_rows,True
+risk_curve_complete,True
+accuracy_valid,True
+error_rate_valid,True

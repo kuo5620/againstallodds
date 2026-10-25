@@ -1,0 +1,8 @@
+check,passed
+three_sports_present,True
+index_between_0_and_100,True
+calibrated_probability_valid,True
+fragility_valid,True
+error_risk_valid,True
+disagreement_valid,True
+categories_valid,True

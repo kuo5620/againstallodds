@@ -1,0 +1,6 @@
+requested_coverage_percent,sport_with_largest_accuracy_gain,largest_accuracy_gain
+100.0,NBA,0.0
+90.0,Premier League,0.015315315315315381
+80.0,NBA,0.031248077435760746
+70.0,NBA,0.04334961226456835
+60.0,NBA,0.06223981297295089

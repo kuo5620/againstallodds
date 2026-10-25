@@ -1,0 +1,25 @@
+{
+  "project": "Against All Odds",
+  "week": 13,
+  "index_name": "Against All Odds Unpredictability Index",
+  "range": "0 to 100; higher = more unpredictable",
+  "formula_note": "The capstone draft names the inputs but does not prescribe an exact formula. This implementation uses a transparent equal-weight composite.",
+  "weights": {
+    "CALIBRATED_UNCERTAINTY_COMPONENT": 0.25,
+    "FRAGILITY_COMPONENT": 0.25,
+    "ERROR_RISK_COMPONENT": 0.25,
+    "MODEL_DISAGREEMENT_COMPONENT": 0.25
+  },
+  "components": {
+    "CALIBRATED_UNCERTAINTY_COMPONENT": "100 * (1 - abs(calibrated home-win probability - 0.50) / 0.50)",
+    "FRAGILITY_COMPONENT": "Week 11 Fragility Score",
+    "ERROR_RISK_COMPONENT": "100 * Week 12 ERROR_RISK_PROBABILITY",
+    "MODEL_DISAGREEMENT_COMPONENT": "100 * MODEL_DISAGREEMENT_COUNT / 2"
+  },
+  "categories": {
+    "Predict": "0 <= index < 33.33",
+    "Caution": "33.33 <= index < 66.67",
+    "Abstain": "66.67 <= index <= 100"
+  },
+  "evaluation_split": "TEST"
+}

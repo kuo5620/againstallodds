@@ -1,0 +1,16 @@
+{
+  "project": "Against All Odds",
+  "week": 13,
+  "experiment": "Abstain from highest-Unpredictability games first",
+  "required_coverages": [
+    "100%",
+    "90%",
+    "80%",
+    "70%",
+    "60%"
+  ],
+  "ranking_rule": "Within each sport, sort TEST games from lowest to highest Unpredictability Index.",
+  "coverage_definition": "Share of games for which a winner prediction is retained.",
+  "risk_definition": "Prediction error rate among retained games.",
+  "evaluation_split": "TEST"
+}
